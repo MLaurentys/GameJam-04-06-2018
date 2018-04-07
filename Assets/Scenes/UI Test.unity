@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 433737996}
   - component: {fileID: 433737994}
   - component: {fileID: 433737995}
+  - component: {fileID: 433737997}
   m_Layer: 0
   m_Name: Artist
   m_TagString: Untagged
@@ -668,6 +669,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!50 &433737997
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 433737992}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &475462462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,6 +1131,7 @@ GameObject:
   - component: {fileID: 724826362}
   - component: {fileID: 724826361}
   - component: {fileID: 724826364}
+  - component: {fileID: 724826365}
   m_Layer: 0
   m_Name: Lonely Guy
   m_TagString: Untagged
@@ -1211,6 +1233,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6038289, y: 1.4251449}
   m_EdgeRadius: 0
+--- !u!50 &724826365
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724826360}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &773146632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,6 +1759,7 @@ GameObject:
   - component: {fileID: 1220495889}
   - component: {fileID: 1220495888}
   - component: {fileID: 1220495887}
+  - component: {fileID: 1220495890}
   m_Layer: 0
   m_Name: Restaurant Owner
   m_TagString: Untagged
@@ -1818,6 +1861,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!50 &1220495890
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1220495885}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1230133621
 GameObject:
   m_ObjectHideFlags: 0
