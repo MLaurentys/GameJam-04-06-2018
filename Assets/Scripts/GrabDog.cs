@@ -19,8 +19,10 @@ public class GrabDog : Interactables {
 	void Update () {
 		
 	}
-	void OnTriggerEnter(Collider other){
+	void OnTriggerEnter2D(Collider2D other){
+
 		if (other.gameObject.tag == "Couch") {
+            print("Couch is hit");
 			couchInPlace = true;
 		}
 	}
