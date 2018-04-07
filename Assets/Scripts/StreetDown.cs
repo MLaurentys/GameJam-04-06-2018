@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class street0interactor : Interactables {
+public class StreetDown : Interactables {
 	public GameObject player;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,11 +14,12 @@ public class street0interactor : Interactables {
 	void Update () {
 		
 	}
+
 	public override void highlight(){
 		gameObject.GetComponent<SpriteRenderer> ().color = new Color32 (150, 0, 0, 255);
 	}
 	public override void triggerInteraction(){
 
-		player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 20, 0);
+		player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y - 20, 0);
 	}
 }
