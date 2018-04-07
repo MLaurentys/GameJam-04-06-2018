@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Dialouge
   - Couch
+  - DogToy
   layers:
   - Default
   - TransparentFX
