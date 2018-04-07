@@ -23,7 +23,7 @@ public class Scroll : Interactables {
 			if (sleepTimer >= 1.5f) {
 				portal.GetComponent<BoxCollider2D> ().enabled = true;
 			}
-		}
+		} 
 	}
 
 	public override void highlight(){
@@ -32,7 +32,7 @@ public class Scroll : Interactables {
 	public override void triggerInteraction(){
 
 		gameObject.transform.position = new Vector3 (gameObject.transform.position.x - 0.1f, gameObject.transform.position.y, 0);
-
+		gameObject.GetComponent<AudioSource>().PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
 		if (gameObject.transform.position.x <= basePosition.x - width) {
 			gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 			disabled = true;
