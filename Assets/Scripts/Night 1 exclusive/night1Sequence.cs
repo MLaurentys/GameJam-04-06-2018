@@ -129,6 +129,8 @@ public class night1Sequence : MonoBehaviour {
 				}
 			};
 			cook.SetActive (false);
+			GameObject.FindGameObjectWithTag ("OutsideMenu").SetActive (false);
+			GameObject.FindGameObjectWithTag ("Table").SetActive (true);
 			artist.GetComponent<night1Artist> ().doneForNow = true;
 			break;
 		case 8:
