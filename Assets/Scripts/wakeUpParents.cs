@@ -61,9 +61,24 @@ public class wakeUpParents : MonoBehaviour {
         zzz.GetComponent<RectTransform>().position = zzzBasePosition;
 
         GameObject honey = zzzMask.transform.parent.GetChild(2).gameObject;
+        GameObject locked = zzzMask.transform.parent.GetChild(3).gameObject;
+        GameObject ghosts = zzzMask.transform.parent.GetChild(4).gameObject;
+        GameObject awake = zzzMask.transform.parent.GetChild(5).gameObject;
 
-        if (noiseRatio > .333f)
+        if (noiseRatio > .25f)
             honey.transform.position = new Vector2(honey.transform.position.x + 6, honey.transform.position.y + 3);
+
+        if(noiseRatio > .5f)
+            locked.transform.position = new Vector2(locked.transform.position.x + 5, locked.transform.position.y + .5f);
+
+        if(noiseRatio > .75f)
+            ghosts.transform.position = new Vector2(ghosts.transform.position.x - 6, ghosts.transform.position.y - 2);
+
+        if(noiseRatio > .9f)
+        {
+            awake.transform.position = new Vector2(awake.transform.position.x - 5, awake.transform.position.y - .1f);
+        }
+
     }
 
 	public void noiseMade(float weight){
