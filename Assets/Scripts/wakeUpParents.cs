@@ -59,6 +59,11 @@ public class wakeUpParents : MonoBehaviour {
         zzzMask.GetComponent<RectTransform>().position = Vector2.Lerp(zzzMaskBasePosition, bottomOfMask, noiseRatio);
 
         zzz.GetComponent<RectTransform>().position = zzzBasePosition;
+
+        GameObject honey = zzzMask.transform.parent.GetChild(2).gameObject;
+
+        if (noiseRatio > .333f)
+            honey.transform.position = new Vector2(honey.transform.position.x + 6, honey.transform.position.y + 3);
     }
 
 	public void noiseMade(float weight){
