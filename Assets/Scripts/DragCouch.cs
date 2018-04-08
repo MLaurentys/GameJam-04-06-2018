@@ -25,8 +25,14 @@ public class DragCouch : Interactables {
 
         if (move)
         {
-            transform.position = Vector2.MoveTowards(transform.position, targetPos, .1f);
-        }
+			if(Input.GetKey(KeyCode.E)){
+        	    transform.position = Vector2.MoveTowards(transform.position, targetPos, .05f);
+			}
+		}
+		if (transform.position == new Vector3(targetPos.x, targetPos.y, 0)) {
+			gameObject.GetComponent<BoxCollider2D> ().enabled = false;
+
+		}
 		
 	}
 	public override void highlight(){
@@ -37,4 +43,5 @@ public class DragCouch : Interactables {
         move = true;
 
 	}
+
 }

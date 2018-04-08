@@ -2,41 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class GrabDog : Interactables {
-	public GameObject player;
+public class leaveHouse1 : Interactables {
 	GameObject dialogue;
 	public string[] messages;
-	bool couchInPlace;
+	public GameObject player;
 	GameManager gameManager;
-
+	int messageIndex;
 	// Use this for initialization
 	void Start () {
 		dialogue = GameObject.FindGameObjectWithTag("Dialouge");
 		gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
-		couchInPlace = false;
+		messageIndex = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-	void OnTriggerEnter2D(Collider2D other){
 
-		if (other.gameObject.tag == "Couch") {
-            //print("Couch is hit");
-			couchInPlace = true;
-		}
+	public override void highlight(){
+		gameObject.GetComponent<SpriteRenderer> ().color = new Color32 (150, 0, 0, 255); 
 	}
-
 	public override void triggerInteraction(){
-		if (couchInPlace) {
-			messages = new string[]{"Got it"};
-			player.GetComponent<Bag> ().addItem ("Dog");
-			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 
-		} else {
-			messages = new string[]{"Can't Reach"};
+		if (player.GetComponent<Bag> ().hasItem ("Dog")) {
+			if (player.GetComponent<Bag> ().hasItem ("LightBulb")) {
+				messageIndex = 2;
+			}
+			messageIndex = 1;
 		}
+
+
+
 		Text diaText;
 
 		diaText = dialogue.transform.GetChild(1).GetComponent<Text>();
@@ -50,25 +47,13 @@ public class GrabDog : Interactables {
 			dialogue.transform.GetChild(0).gameObject.GetComponent<Image>().enabled = !dialogue.transform.GetChild(0).gameObject.GetComponent<Image>().enabled;
 
 			dialogue.transform.GetChild(1).gameObject.GetComponent<AutoType>().textChanged = true;
-			diaText.gameObject.GetComponent<AutoType>().messageIndex = 0;
+			diaText.gameObject.GetComponent<AutoType>().messageIndex = this.messageIndex;
 			gameManager.gameState = GameManager.GameState.Talking;
 			break;
 		case (GameManager.GameState.Talking):
 
 			diaText.gameObject.GetComponent<AutoType>().textChanged = true;
 			break;
-
-		}
-	}
-	public override void highlight(){
-		if (couchInPlace) {
-			gameObject.GetComponent<SpriteRenderer> ().color = new Color32 (150, 0, 0, 255); 
-		}
-	}	
-
-	void OnTriggerExit2D(){
-		if (!gameObject.GetComponent<SpriteRenderer> ().enabled) {
-			GameObject.Destroy (gameObject);
 
 		}
 
