@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bag : MonoBehaviour {
-	List<string> items;
+	public List<string> items;
 	// Use this for initialization
 	void Start () {
 		items = new List<string> ();

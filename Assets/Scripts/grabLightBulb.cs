@@ -8,11 +8,13 @@ public class grabLightBulb : Interactables {
 	public string[] messages;
 	GameManager gameManager;
 	bool active;
+	bool acquired;
 	// Use this for initialization
 	void Start () {
 		dialogue = GameObject.FindGameObjectWithTag("Dialouge");
 		gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 		active = false;
+		acquired = false;
 	}
 
 	// Update is called once per frame
@@ -23,10 +25,11 @@ public class grabLightBulb : Interactables {
 	}
 
 	public override void triggerInteraction(){
-		if (active) {
+		if (active && !acquired) {
 			messages = new string[]{"Got it"};
 			player.GetComponent<Bag> ().addItem ("LightBulb");
 			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+			acquired = true;
 		Text diaText;
 
 		diaText = dialogue.transform.GetChild(1).GetComponent<Text>();

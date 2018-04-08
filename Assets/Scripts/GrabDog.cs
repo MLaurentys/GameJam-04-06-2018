@@ -8,12 +8,13 @@ public class GrabDog : Interactables {
 	public string[] messages;
 	bool couchInPlace;
 	GameManager gameManager;
-
+	bool acquired;
 	// Use this for initialization
 	void Start () {
 		dialogue = GameObject.FindGameObjectWithTag("Dialouge");
 		gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 		couchInPlace = false;
+		acquired = false;
 	}
 	
 	// Update is called once per frame
@@ -29,9 +30,10 @@ public class GrabDog : Interactables {
 	}
 
 	public override void triggerInteraction(){
-		if (couchInPlace) {
+		if (couchInPlace && !acquired) {
 			messages = new string[]{"Got it"};
 			player.GetComponent<Bag> ().addItem ("Dog");
+			acquired = true;
 			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 
 		} else {
