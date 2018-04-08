@@ -650,7 +650,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256865104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 311, y: -113, z: 0}
+  m_LocalPosition: {x: 310, y: -120.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1747680732}
@@ -659,8 +659,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 311, y: -113}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 310, y: -120.45}
+  m_SizeDelta: {x: 239.6, y: 44.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256865106
 MonoBehaviour:
@@ -814,6 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1475abe9b40b61c408b9884ad05a3e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   player: {fileID: 1230133621}
 --- !u!212 &273717724
 SpriteRenderer:
@@ -1405,6 +1406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e82a734e0f155d4d854f5880ba71a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   messages:
   - Memento Mori if the Nineth Lion Ate the Sun
   - Those Eyes, whose are they?
@@ -1515,6 +1517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1475abe9b40b61c408b9884ad05a3e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   player: {fileID: 1230133621}
 --- !u!61 &475462465
 BoxCollider2D:
@@ -1641,10 +1644,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1919,6 +1922,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   day: 1
+  oldVisited: 0
+  artVisted: 0
+  cookVisited: 0
   gameState: 0
 --- !u!1 &678883937
 GameObject:
@@ -1949,6 +1955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7b0d0ec3a1eef4e8d5cad45018da0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   player: {fileID: 1230133621}
 --- !u!212 &678883939
 SpriteRenderer:
@@ -2327,6 +2334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e82a734e0f155d4d854f5880ba71a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   messages: []
 --- !u!212 &724826362
 SpriteRenderer:
@@ -2586,7 +2594,7 @@ GameObject:
   - component: {fileID: 767756307}
   m_Layer: 5
   m_Name: EndDay
-  m_TagString: Untagged
+  m_TagString: EndDay
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3183,6 +3191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7b0d0ec3a1eef4e8d5cad45018da0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   player: {fileID: 1230133621}
 --- !u!212 &1162195048
 SpriteRenderer:
@@ -3606,6 +3615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e82a734e0f155d4d854f5880ba71a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   messages:
   - Hey kid
 --- !u!212 &1220495889
@@ -3908,6 +3918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8.13
+  snoreCheck: {fileID: 0}
 --- !u!50 &1230133625
 Rigidbody2D:
   serializedVersion: 4
@@ -5764,10 +5775,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -6673,7 +6684,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2062168183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -290, y: -113, z: 0}
+  m_LocalPosition: {x: -285, y: -120.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 476156385}
@@ -6682,8 +6693,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -290, y: -113}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -285, y: -120.55}
+  m_SizeDelta: {x: 240.8, y: 45.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2062168185
 MonoBehaviour:
@@ -6882,6 +6893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b95d8a294dfe6942bc9e9ea0a5ee623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
+  endDay: {fileID: 0}
 --- !u!50 &2069943701
 Rigidbody2D:
   serializedVersion: 4

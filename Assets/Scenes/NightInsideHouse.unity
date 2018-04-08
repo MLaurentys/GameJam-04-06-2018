@@ -2570,6 +2570,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   day: 1
+  oldVisited: 0
+  artVisted: 0
+  cookVisited: 0
   gameState: 0
 --- !u!4 &1626930165
 Transform:
@@ -2748,6 +2751,7 @@ GameObject:
   - component: {fileID: 2050401479}
   - component: {fileID: 2050401482}
   - component: {fileID: 2050401481}
+  - component: {fileID: 2050401483}
   m_Layer: 0
   m_Name: LightBulb
   m_TagString: Untagged
@@ -2854,6 +2858,26 @@ MonoBehaviour:
   snore: {fileID: 0}
   player: {fileID: 617694832}
   messages: []
+--- !u!50 &2050401483
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2050401478}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2084623449
 GameObject:
   m_ObjectHideFlags: 0

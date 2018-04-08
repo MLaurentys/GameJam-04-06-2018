@@ -55,6 +55,7 @@ public class AutoType : MonoBehaviour
                 text.transform.parent.GetChild(0).gameObject.GetComponent<Image>().enabled = false;
                 text.enabled = false;
                 gameManager.gameState = GameManager.GameState.Free;
+                messageIndex = 0;
 
             }
         }
