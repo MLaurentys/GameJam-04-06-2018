@@ -153,6 +153,15 @@ public class night1Sequence : MonoBehaviour {
 					"Thank you boy",
 					"Thanks kid"
 				}
+
+			};
+			gameObject.GetComponent<GameManager> ().oldManMess2 = new string[][] {new string[] {
+					"Thanks Kid"
+				}
+			};
+			gameObject.GetComponent<GameManager> ().artistMess2 = new string[][] {new string[] {
+					"Thanks Kid"
+				}
 			};
 			break;
 		case 10:

@@ -16,7 +16,7 @@ public class night1RestaurantOwner : Interactables {
 
 	public override void triggerInteraction(){
 		int aux = gameManager.gameObject.GetComponent<night1Sequence> ().getProgress ();
-		if (aux == 2 || aux == 4) {
+		if (aux == 2 || aux == 4 || aux == 9) {
 			gameManager.gameObject.GetComponent<night1Sequence> ().makeProgress ();
 		}
 	}
