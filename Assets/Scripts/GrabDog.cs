@@ -61,6 +61,7 @@ public class GrabDog : Interactables {
 			break;
 
 		}
+		makeNoise (0.3f);
 	}
 	public override void highlight(){
 		if (couchInPlace) {

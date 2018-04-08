@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7b0d0ec3a1eef4e8d5cad45018da0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   player: {fileID: 617694832}
 --- !u!61 &1534429
 BoxCollider2D:
@@ -382,6 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7b0d0ec3a1eef4e8d5cad45018da0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   player: {fileID: 617694832}
 --- !u!1 &155670670
 GameObject:
@@ -515,6 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e537dc26448f7b8498a763f93bfbd7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
 --- !u!1 &300765002
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ef4a72f17555d4d858b2f0bf57b197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   player: {fileID: 617694832}
   messages: []
 --- !u!50 &303521491
@@ -835,10 +839,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2b15be8c36a92854988b4619812dd934, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -951,6 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  snoreCheck: {fileID: 0}
 --- !u!212 &617694834
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1330,6 +1335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66950c506bcf93498290f9524d982ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   messages:
   - I should not leave empty handed
   - Oh, oh, Eureka!!!
@@ -1897,6 +1903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1475abe9b40b61c408b9884ad05a3e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   player: {fileID: 617694832}
 --- !u!212 &1201117822
 SpriteRenderer:
@@ -2224,6 +2231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7b0d0ec3a1eef4e8d5cad45018da0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   player: {fileID: 617694832}
 --- !u!1 &1607996675
 GameObject:
@@ -2294,6 +2302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713744ce262d21540bb1372c82d0454a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   portal: {fileID: 1395250637}
 --- !u!212 &1607996679
 SpriteRenderer:
@@ -2642,6 +2651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1475abe9b40b61c408b9884ad05a3e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   player: {fileID: 617694832}
 --- !u!212 &1864083040
 SpriteRenderer:
@@ -2698,7 +2708,7 @@ GameObject:
   - component: {fileID: 1996586977}
   m_Layer: 0
   m_Name: SoundCheck
-  m_TagString: Untagged
+  m_TagString: snoreCheck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2714,7 +2724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef540d89983b3e4c816e1d95f56703d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snoring: {fileID: 0}
 --- !u!4 &1996586978
 Transform:
   m_ObjectHideFlags: 0
@@ -2842,6 +2851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e93db4a35edb364b8e269a1a4ac350e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snore: {fileID: 0}
   player: {fileID: 617694832}
   messages: []
 --- !u!1 &2084623449
