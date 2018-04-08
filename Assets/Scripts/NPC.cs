@@ -14,8 +14,21 @@ public class NPC : Interactables {
 	void Start () {
         dialogue = GameObject.FindGameObjectWithTag("Dialouge");
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+
+
+		//nightOne logic initializer
+		switch(gameObject.tag){
+		case("OldManNight1"):
+			gameObject.GetComponent<night1OldMan> ().gameManager = this.gameManager;
+			break;
+		case("ArtistNight1"):
+			gameObject.GetComponent<night1Artist> ().gameManager = this.gameManager;
+			break;
+		case ("CookNight1"):
+			gameObject.GetComponent<night1RestaurantOwner> ().gameManager = this.gameManager;
+			break;
+		}
     }
-	
 	// Update is called once per frame
 	void Update () {
 		
@@ -40,24 +53,21 @@ public class NPC : Interactables {
             break;
         case ("Cook"):
             gameManager.cookVisited = true;
-            messages = gameManager.allMess[2][gameManager.day - 1][Random.Range(0, gameManager.allMess[2][gameManager.day - 1].Length)]; break;
+            messages = gameManager.allMess[2][gameManager.day - 1][Random.Range(0, gameManager.allMess[2][gameManager.day - 1].Length)];
 			break;
 		case ("OldManNight1"):
-			if (gameManager.oldVisited) {
-				messages = gameManager.allMess [0] [gameManager.day] [1];
-			} else {
-				messages = gameManager.allMess [0] [gameManager.day] [0];
+			messages = gameManager.allMess [0] [gameManager.day] [0];
 
-			}
 			gameManager.oldVisited = true;
 
 			break;
-		case ("ArtistNight1"): messages = gameManager.allMess[1][gameManager.day - 1][Random.Range(0, gameManager.allMess[1][gameManager.day - 1].Length)];
+		case ("ArtistNight1"):	
+			messages = gameManager.allMess [1] [gameManager.day] [0];
 			gameManager.artVisted = true;
 			break;
 		case ("CookNight1"):
 			gameManager.cookVisited = true;
-			messages = gameManager.allMess[2][gameManager.day - 1][Random.Range(0, gameManager.allMess[2][gameManager.day - 1].Length)]; break;
+			messages = gameManager.allMess[2][gameManager.day][0];
 			break;
     }
 

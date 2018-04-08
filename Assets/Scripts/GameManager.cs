@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
 
 	public string[][] oldManMess2;
 	public string[][] artistMess2;
+	public string[][] cookMess2;
 
     public string[][][] oldManMess;
     public string[][][] artistMess;
@@ -37,23 +38,9 @@ public class GameManager : MonoBehaviour {
             new string[]{"Hey kid, what do you call bears without bees?", "Ears!", "Haha, get it?  Because Bs..."}
 
         };
-		oldManMess2 = new string[][]{
-			new string[] {	"Hey kid, why are you out here in the middle of the night?<br><br>Did you come to think about your mistakes as well?",
-							"Not much of a talker, are you?<br>...<br>C'mom, you are not ignoring me too, are you?",
-							"*gives dog*",
-							"Is this you buddy, kid?<br>... .. Why are you...<br>"},
-			new string[] { "Is this you buddy, kid?<br>... .. Why are you...<br>"}
 
-		};
-        artistMess1 = new string[][]{
 
-            new string[]{"Hey kid, what's your favoirte cartoon?", "Oh really?", "Ah well,  it makes sense.  I wasn't really expecting anything..."},
-            new string[]{"(...How am I supposed to finish in just a week?)", "(Are they out of their minds?)"},
-            new string[]{"\"Don't go to art school\"", "\"You'll never make anything out of yourself like that!\"", "Honestly, at this point, I feel as if I should have my father's advice..."}
-       
-
-        };
-		artistMess2 = new string[][]{
+		artistMess1 = new string[][]{
 
 			new string[]{"Hey kid, what's your favoirte cartoon?", "Oh really?", "Ah well,  it makes sense.  I wasn't really expecting anything..."},
 			new string[]{"(...How am I supposed to finish in just a week?)", "(Are they out of their minds?)"},
@@ -61,6 +48,8 @@ public class GameManager : MonoBehaviour {
 
 
 		};
+
+
         cookMess1 = new string[][]
         {
             new string[]{"Tainted, they says?", "I'll show thems tainted!"},
@@ -69,7 +58,7 @@ public class GameManager : MonoBehaviour {
         };
 
         oldManMess = new string[][][] { oldManMess1, oldManMess2 };
-        artistMess = new string[][][] { artistMess1 };
+        artistMess = new string[][][] { artistMess1, artistMess2 };
         cookMess = new string[][][]{cookMess1}; 
         
 
@@ -85,5 +74,14 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void updateText(){
+		oldManMess = new string[][][] { oldManMess1, oldManMess2 };
+		artistMess = new string[][][] { artistMess1, artistMess2 };
+		cookMess = new string[][][]{cookMess1, cookMess2}; 
+
+
+		allMess = new string[][][][] { oldManMess, artistMess, cookMess };
 	}
 }
