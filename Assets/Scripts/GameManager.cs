@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+	public GameObject player;
+	public GameObject cameraCollider;
+
     public string[][] oldManMess1;
     public string[][] cookMess1;
     public string[][] artistMess1;
@@ -63,6 +66,9 @@ public class GameManager : MonoBehaviour {
         
 
         allMess = new string[][][][] { oldManMess, artistMess, cookMess };
+
+		Physics2D.IgnoreCollision (player.GetComponent<Collider2D> (), Camera.main.GetComponent<Collider2D> ());
+		Physics2D.IgnoreCollision (player.GetComponent<Collider2D> (), cameraCollider.GetComponent<Collider2D>());
 
     }
 
