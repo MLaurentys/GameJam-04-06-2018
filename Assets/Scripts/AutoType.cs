@@ -43,6 +43,7 @@ public class AutoType : MonoBehaviour
             try                                       //I'm tired of this and am taking the cheap way out...
             {
                 message = messages[messageIndex];
+				message = message.Replace("<br>", System.Environment.NewLine);
                 StopAllCoroutines();
                 text.text = "";
                 StartCoroutine(TypeText());
