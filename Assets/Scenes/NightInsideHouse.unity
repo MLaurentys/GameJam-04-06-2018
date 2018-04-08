@@ -3607,7 +3607,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noiseAmt: 0
   awake: 0
-  message: []
+  message:
+  - bad
   gameManager: {fileID: 0}
   noiseRatio: 0
   zzz: {fileID: 0}

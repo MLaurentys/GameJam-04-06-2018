@@ -83,7 +83,7 @@ public class wakeUpParents : MonoBehaviour {
 
        if (awake)
         {
-            noiseAmt = 0;
+            //noiseAmt = 0;
             Text diaText = dialogue.transform.GetChild(1).GetComponent<Text>();
 
             switch (gameManager.gameState)
@@ -92,14 +92,16 @@ public class wakeUpParents : MonoBehaviour {
                 case (GameManager.GameState.Free):
                     text.gameObject.GetComponent<AutoType>().messages = message;
 
-                    dialogue.transform.GetChild(1).gameObject.GetComponent<Text>().enabled = !dialogue.transform.GetChild(1).gameObject.GetComponent<Text>().enabled;
-                    dialogue.transform.GetChild(0).gameObject.GetComponent<Image>().enabled = !dialogue.transform.GetChild(0).gameObject.GetComponent<Image>().enabled;
+                    dialogue.transform.GetChild(1).gameObject.GetComponent<Text>().enabled = true;
+                    dialogue.transform.GetChild(0).gameObject.GetComponent<Image>().enabled = true;
 
                     dialogue.transform.GetChild(1).gameObject.GetComponent<AutoType>().textChanged = true;
                     diaText.gameObject.GetComponent<AutoType>().messageIndex = 0;
                     gameManager.gameState = GameManager.GameState.Talking;
                     parentsAwoken = true;
+                    awake = false;
                     break;
+                    
                     
 
             }
@@ -113,8 +115,8 @@ public class wakeUpParents : MonoBehaviour {
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-
-                    text.GetComponent<AutoType>().textChanged = true;
+                    SceneManager.LoadScene(1);
+                    
                 }
 
             }
