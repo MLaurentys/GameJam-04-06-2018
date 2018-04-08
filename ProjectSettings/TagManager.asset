@@ -14,6 +14,8 @@ TagManager:
   - Cook
   - EndDay
   - OldManNight1
+  - ArtistNight1
+  - CookNight1
   layers:
   - Default
   - TransparentFX
