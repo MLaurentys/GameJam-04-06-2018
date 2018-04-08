@@ -52,6 +52,7 @@ public class grabLightBulb : Interactables {
 				break;
 			}
 		}
+		makeNoise (0.3f);
 	}
 	public override void highlight(){
 		if (player.GetComponent<Bag>().hasItem("Dog")) {
