@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class wakeUpParents : MonoBehaviour {
 	GameObject snoring;
@@ -15,6 +16,7 @@ public class wakeUpParents : MonoBehaviour {
     Text text;
     Image box;
     public GameManager gameManager;
+    bool parentsAwoken = false;
 
     public float noiseRatio;
 
@@ -77,14 +79,9 @@ public class wakeUpParents : MonoBehaviour {
 	}
 
 	void wakeUp(){
-        if(awake)
-        {
-            noiseAmt = 0;
-            zzzMask.GetComponent<RectTransform>().position = zzzMaskBasePosition;
-        }
 
 
-        /*if (awake)
+       if (awake)
         {
             noiseAmt = 0;
             Text diaText = dialogue.transform.GetChild(1).GetComponent<Text>();
@@ -100,7 +97,10 @@ public class wakeUpParents : MonoBehaviour {
 
                     dialogue.transform.GetChild(1).gameObject.GetComponent<AutoType>().textChanged = true;
                     diaText.gameObject.GetComponent<AutoType>().messageIndex = 0;
-                    gameManager.gameState = GameManager.GameState.Talking; break; 
+                    gameManager.gameState = GameManager.GameState.Talking;
+                    parentsAwoken = true;
+                    break;
+                    
 
             }
             
@@ -109,12 +109,15 @@ public class wakeUpParents : MonoBehaviour {
         {
             //  var thing = AndroidActivityIndicatorStyle.InversedSmall.GetType().GetType().GetType().GetType().GetType();    
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (parentsAwoken)
             {
-             
-                text.GetComponent<AutoType>().textChanged = true;
-            }
+                if (Input.GetKeyDown(KeyCode.E))
+                {
 
-        } */
+                    text.GetComponent<AutoType>().textChanged = true;
+                }
+
+            }
+        } 
 	}
 }
