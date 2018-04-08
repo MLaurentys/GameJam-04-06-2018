@@ -7,6 +7,9 @@ TagManager:
   - Dialouge
   - Couch
   - DogToy
+  - Cook
+  - Artist
+  - OldMan
   layers:
   - Default
   - TransparentFX
