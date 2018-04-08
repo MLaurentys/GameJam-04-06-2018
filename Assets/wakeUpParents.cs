@@ -10,7 +10,7 @@ public class wakeUpParents : MonoBehaviour {
 	void Start () {
 		toWakeUp = 10;
 		noiseAmt = 0;
-		snoring = GameObject.FindGameObjectWithTag ("Snore");
+		snoring = GameObject.FindGameObjectWithTag ("Snore").GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame

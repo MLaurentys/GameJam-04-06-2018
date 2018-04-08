@@ -35,9 +35,13 @@ public class NPC : Interactables {
             
             case ("OldMan"):
                 messages = gameManager.allMess[0][gameManager.day - 1][Random.Range(0, gameManager.allMess[0][gameManager.day - 1].Length)];
+                gameManager.oldVisited = true;
                 break;
-            case ("Artist"): messages = gameManager.allMess[1][gameManager.day - 1][Random.Range(0, gameManager.allMess[1][gameManager.day - 1].Length)]; break;
+            case ("Artist"): messages = gameManager.allMess[1][gameManager.day - 1][Random.Range(0, gameManager.allMess[1][gameManager.day - 1].Length)];
+                gameManager.artVisted = true;
+                break;
             case ("Cook"):
+                gameManager.cookVisited = true;
                 messages = gameManager.allMess[2][gameManager.day - 1][Random.Range(0, gameManager.allMess[2][gameManager.day - 1].Length)]; break;
         }
 

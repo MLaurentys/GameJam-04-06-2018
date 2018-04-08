@@ -1,11 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoHoM : Interactables {
 
+    public GameObject endDay;
+    GameManager gameManager;
+
 	// Use this for initialization
 	void Start () {
+
+        endDay = GameObject.FindGameObjectWithTag("EndDay");
+        endDay.SetActive(false);
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 		
 	}
 	
@@ -22,16 +30,17 @@ public class GoHoM : Interactables {
 
     public override void triggerInteraction()
     {
-        print("Memento Mori");
+        if(gameManager.oldVisited && gameManager.artVisted && gameManager.cookVisited)
+        endDay.SetActive(true);   
     }
 
     public void Yes()
     {
-
+        SceneManager.LoadScene(1);
     }
 
     public void No()
     {
-
+        endDay.SetActive(false);
     }
 }

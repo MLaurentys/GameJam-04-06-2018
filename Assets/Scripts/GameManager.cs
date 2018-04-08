@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour {
 
     public int day = 1;
 
+    public bool oldVisited;
+    public bool artVisted;
+    public bool cookVisited;
+
 
     public enum GameState{Free,Talking}
 
