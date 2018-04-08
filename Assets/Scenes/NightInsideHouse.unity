@@ -4794,7 +4794,7 @@ MonoBehaviour:
   noiseAmt: 0
   awake: 0
   message:
-  - bad
+  - What are you doing up?   Get back to bed!
   gameManager: {fileID: 0}
   noiseRatio: 0
   zzz: {fileID: 0}
