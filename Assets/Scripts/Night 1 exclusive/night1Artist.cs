@@ -20,7 +20,7 @@ public class night1Artist : Interactables {
 
 	public override void triggerInteraction(){
 		int aux = gameManager.gameObject.GetComponent<night1Sequence> ().getProgress ();
-		if (aux == 1 || aux == 6) {
+		if (aux == 1 || aux == 6 || aux == 8) {
 			gameManager.gameObject.GetComponent<night1Sequence> ().makeProgress ();
 		}
 	}
