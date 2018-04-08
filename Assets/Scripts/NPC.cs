@@ -27,7 +27,19 @@ public class NPC : Interactables {
     }
 
     public override void triggerInteraction()
-    {
+    { 
+
+        switch(gameObject.tag)
+        {
+
+            
+            case ("OldMan"):
+                messages = gameManager.allMess[0][gameManager.day - 1][Random.Range(0, gameManager.allMess[0][gameManager.day - 1].Length)];
+                break;
+            case ("Artist"): messages = gameManager.allMess[1][gameManager.day - 1][Random.Range(0, gameManager.allMess[1][gameManager.day - 1].Length)]; break;
+            case ("Cook"):
+                messages = gameManager.allMess[2][gameManager.day - 1][Random.Range(0, gameManager.allMess[2][gameManager.day - 1].Length)]; break;
+        }
 
         Text diaText;
 
