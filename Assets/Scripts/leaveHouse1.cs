@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class leaveHouse1 : Interactables {
 	GameObject dialogue;
 	public string[] messages;
@@ -9,6 +11,7 @@ public class leaveHouse1 : Interactables {
 	public GameObject player;
 	GameManager gameManager;
 	int messageIndex;
+	bool done;
 	// Use this for initialization
 	void Start () {
 		dialogue = GameObject.FindGameObjectWithTag("Dialouge");
@@ -18,11 +21,15 @@ public class leaveHouse1 : Interactables {
 		string[] messages2 = new string[]{ "Oh, oh, Eureka!!!" };
 		string[] messages3 = new string[]{ "Time to go!" };
 		allMessages = new string[][]{ messages1, messages2, messages3 };
+		done = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (done && gameManager.gameState == GameManager.GameState.Free) {
+			SceneManager.LoadScene(4);
+
+		}
 	}
 
 	public override void highlight(){
@@ -33,6 +40,7 @@ public class leaveHouse1 : Interactables {
 		if (player.GetComponent<Bag> ().hasItem ("Dog")) {
 			if (player.GetComponent<Bag> ().hasItem ("LightBulb")) {
 				messageIndex = 2;
+				done = true;
 			} else {
 				messageIndex = 1;
 			}

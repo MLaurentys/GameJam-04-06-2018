@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class night1Sequence : MonoBehaviour {
 	public GameObject artist;
@@ -152,6 +153,7 @@ public class night1Sequence : MonoBehaviour {
 			};
 			break;
 		case 10:
+			SceneManager.LoadScene(3);
 			break;
 		}
 		gameObject.GetComponent<GameManager> ().updateText ();
