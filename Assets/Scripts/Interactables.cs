@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Interactables : MonoBehaviour {
-	public GameObject snore;
+	GameObject snore;
 
 	// Use this for initialization
 	void Start () {

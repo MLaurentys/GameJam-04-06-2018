@@ -9,6 +9,11 @@ TagManager:
   - DogToy
   - Snore
   - snoreCheck
+  - Artist
+  - OldMan
+  - Cook
+  - EndDay
+  - OldManNight1
   layers:
   - Default
   - TransparentFX
