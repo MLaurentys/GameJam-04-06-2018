@@ -39,7 +39,7 @@ public class DragCouch : Interactables {
 		gameObject.GetComponent<SpriteRenderer> ().color = new Color32 (150, 0, 0, 255); 
 	}
 	public override void triggerInteraction(){
-
+		gameObject.GetComponent<AudioSource> ().Play ();
         move = true;
 
 	}
