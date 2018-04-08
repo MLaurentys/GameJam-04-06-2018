@@ -16,6 +16,8 @@ TagManager:
   - OldManNight1
   - ArtistNight1
   - CookNight1
+  - OutsideMenu
+  - Table
   layers:
   - Default
   - TransparentFX
