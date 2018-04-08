@@ -30,9 +30,7 @@ public class NPC : Interactables {
     { 
 
         switch(gameObject.tag)
-        {
-
-            
+        {   
             case ("OldMan"):
                 messages = gameManager.allMess[0][gameManager.day - 1][Random.Range(0, gameManager.allMess[0][gameManager.day - 1].Length)];
                 gameManager.oldVisited = true;
