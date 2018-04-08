@@ -31,17 +31,35 @@ public class NPC : Interactables {
 
         switch(gameObject.tag)
         {   
-            case ("OldMan"):
-                messages = gameManager.allMess[0][gameManager.day - 1][Random.Range(0, gameManager.allMess[0][gameManager.day - 1].Length)];
-                gameManager.oldVisited = true;
-                break;
-            case ("Artist"): messages = gameManager.allMess[1][gameManager.day - 1][Random.Range(0, gameManager.allMess[1][gameManager.day - 1].Length)];
-                gameManager.artVisted = true;
-                break;
-            case ("Cook"):
-                gameManager.cookVisited = true;
-                messages = gameManager.allMess[2][gameManager.day - 1][Random.Range(0, gameManager.allMess[2][gameManager.day - 1].Length)]; break;
-        }
+        case ("OldMan"):
+            messages = gameManager.allMess[0][gameManager.day - 1][Random.Range(0, gameManager.allMess[0][gameManager.day - 1].Length)];
+            gameManager.oldVisited = true;
+            break;
+        case ("Artist"): messages = gameManager.allMess[1][gameManager.day - 1][Random.Range(0, gameManager.allMess[1][gameManager.day - 1].Length)];
+            gameManager.artVisted = true;
+            break;
+        case ("Cook"):
+            gameManager.cookVisited = true;
+            messages = gameManager.allMess[2][gameManager.day - 1][Random.Range(0, gameManager.allMess[2][gameManager.day - 1].Length)]; break;
+			break;
+		case ("OldManNight1"):
+			if (gameManager.oldVisited) {
+				messages = gameManager.allMess [0] [gameManager.day] [1];
+			} else {
+				messages = gameManager.allMess [0] [gameManager.day] [0];
+
+			}
+			gameManager.oldVisited = true;
+
+			break;
+		case ("ArtistNight1"): messages = gameManager.allMess[1][gameManager.day - 1][Random.Range(0, gameManager.allMess[1][gameManager.day - 1].Length)];
+			gameManager.artVisted = true;
+			break;
+		case ("CookNight1"):
+			gameManager.cookVisited = true;
+			messages = gameManager.allMess[2][gameManager.day - 1][Random.Range(0, gameManager.allMess[2][gameManager.day - 1].Length)]; break;
+			break;
+    }
 
         Text diaText;
 

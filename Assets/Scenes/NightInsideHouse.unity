@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 1534430}
   - component: {fileID: 1534429}
   - component: {fileID: 1534428}
+  - component: {fileID: 1534431}
   m_Layer: 0
   m_Name: Living Room -> Hallway
   m_TagString: Untagged
@@ -154,7 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7b0d0ec3a1eef4e8d5cad45018da0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snore: {fileID: 0}
   player: {fileID: 617694832}
 --- !u!61 &1534429
 BoxCollider2D:
@@ -225,6 +225,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!50 &1534431
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1534426}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &40197925
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7b0d0ec3a1eef4e8d5cad45018da0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snore: {fileID: 0}
   player: {fileID: 617694832}
 --- !u!1 &155670670
 GameObject:
@@ -517,7 +536,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e537dc26448f7b8498a763f93bfbd7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snore: {fileID: 0}
 --- !u!1 &300765002
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ef4a72f17555d4d858b2f0bf57b197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snore: {fileID: 0}
   player: {fileID: 617694832}
   messages: []
 --- !u!50 &303521491
@@ -1007,7 +1024,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617694832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.02, y: 0.57, z: 0}
+  m_LocalPosition: {x: -36.57, y: 0.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1335,7 +1352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66950c506bcf93498290f9524d982ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snore: {fileID: 0}
   messages:
   - I should not leave empty handed
   - Oh, oh, Eureka!!!
@@ -1607,6 +1623,7 @@ Transform:
   m_Children:
   - {fileID: 1607996676}
   - {fileID: 45118347}
+  - {fileID: 2050401480}
   m_Father: {fileID: 989574225}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1885,6 +1902,7 @@ GameObject:
   - component: {fileID: 1201117822}
   - component: {fileID: 1201117821}
   - component: {fileID: 1201117824}
+  - component: {fileID: 1201117825}
   m_Layer: 0
   m_Name: Hallway -> Living Room
   m_TagString: Untagged
@@ -1903,7 +1921,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1475abe9b40b61c408b9884ad05a3e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snore: {fileID: 0}
   player: {fileID: 617694832}
 --- !u!212 &1201117822
 SpriteRenderer:
@@ -1987,6 +2004,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1201117825
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1201117820}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1209539181
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,6 +2168,7 @@ GameObject:
   - component: {fileID: 1395250639}
   - component: {fileID: 1395250640}
   - component: {fileID: 1395250641}
+  - component: {fileID: 1395250642}
   m_Layer: 0
   m_Name: Bedroom -> Hallway
   m_TagString: Untagged
@@ -2231,8 +2269,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7b0d0ec3a1eef4e8d5cad45018da0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snore: {fileID: 0}
   player: {fileID: 617694832}
+--- !u!50 &1395250642
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1395250637}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1607996675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,7 +2359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713744ce262d21540bb1372c82d0454a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snore: {fileID: 0}
   portal: {fileID: 1395250637}
 --- !u!212 &1607996679
 SpriteRenderer:
@@ -2598,6 +2654,7 @@ GameObject:
   - component: {fileID: 1864083040}
   - component: {fileID: 1864083039}
   - component: {fileID: 1864083038}
+  - component: {fileID: 1864083041}
   m_Layer: 0
   m_Name: Hallway -> Bedroom
   m_TagString: Untagged
@@ -2654,7 +2711,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1475abe9b40b61c408b9884ad05a3e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snore: {fileID: 0}
   player: {fileID: 617694832}
 --- !u!212 &1864083040
 SpriteRenderer:
@@ -2700,6 +2756,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!50 &1864083041
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864083036}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1996586976
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,7 +2814,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2050401478
 GameObject:
@@ -2809,15 +2885,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2050401478}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.68, y: 2.632, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.700014, y: 1.5956497, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 1041414992}
   - {fileID: 2131626404}
   - {fileID: 1209539182}
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 954622877}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2050401481
 BoxCollider2D:
@@ -2831,7 +2907,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.0638628, y: -5.496624}
+  m_Offset: {x: -0.14528942, y: -5.496624}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2842,7 +2918,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.308266, y: 16.14738}
+  m_Size: {x: 13.522898, y: 16.14738}
   m_EdgeRadius: 0
 --- !u!114 &2050401482
 MonoBehaviour:
@@ -2855,7 +2931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e93db4a35edb364b8e269a1a4ac350e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snore: {fileID: 0}
   player: {fileID: 617694832}
   messages: []
 --- !u!50 &2050401483

@@ -26,13 +26,14 @@ public class grabLightBulb : Interactables {
 
 	public override void triggerInteraction(){
 		if (active && !acquired) {
-			messages = new string[]{"Got it"};
+			messages = new string[]{ "Got it" };
 			player.GetComponent<Bag> ().addItem ("LightBulb");
 			gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 			acquired = true;
-		Text diaText;
+		}
+			Text diaText;
 
-		diaText = dialogue.transform.GetChild(1).GetComponent<Text>();
+			diaText = dialogue.transform.GetChild (1).GetComponent<Text> ();
 
 			switch (gameManager.gameState) {
 
@@ -51,7 +52,6 @@ public class grabLightBulb : Interactables {
 				diaText.gameObject.GetComponent<AutoType> ().textChanged = true;
 				break;
 			}
-		}
 		makeNoise (0.3f);
 	}
 	public override void highlight(){
